@@ -26,3 +26,11 @@ gitorial-cli mdbook -p /path/to/rust-state-machine -i gitorial -o mdbook
 ```
 
 The content of the `/src/` folder will be updated with the latest content from the `gitorial` branch.
+
+## Deployment
+
+Update the `.github/workflows/mdbook.yml` and change the `branches` to match the branch where this template is held. It is configured to `master` to deploy the book for this template repo, but normally you would want to change it to `mdbook`.
+
+Then, in your GitHub settings, under `Pages`, update the source to `GitHub Actions`.
+
+Once you push to your mdBook branch, deployment should automatically take place.
